@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"log"
 	"os"
@@ -14,9 +15,15 @@ import (
 	"github.com/joho/godotenv"
 )
 
+var envFile string
+
 func init() {
-	// Load environment variables from .env file
-	err := godotenv.Load()
+	// Добавляем флаг для указания файла .env
+	flag.StringVar(&envFile, "env", ".env", "Path to the .env file")
+	flag.Parse()
+
+	// Загружаем переменные окружения из указанного файла .env
+	err := godotenv.Load(envFile)
 	if err != nil {
 		log.Fatalf("Error loading .env file: %v", err)
 	}
