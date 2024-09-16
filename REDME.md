@@ -2,7 +2,7 @@
 
 1. copy binary to /home/$USER/.ssh/ direcory
 
-wget https://github.com/efremov-it/ssh_backup/releases/download/v0.0.1/ssh_backup -O /home/$USER/.ssh/ssh_backup
+wget https://github.com/efremov-it/ssh_backup/releases/download/v0.0.2/ssh_backup -O /home/$USER/.ssh/ssh_backup
 chmod u+x /home/$USER/.ssh/ssh_backup
 
 2. add .env file to /home/$USER/.ssh/
